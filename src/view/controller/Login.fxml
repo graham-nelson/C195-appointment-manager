@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.LoginController">
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #5d737e;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="156.0" fitWidth="143.0" layoutX="29.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="119.0">
+                    <image>
+                        <Image url="@imageResources/calendar.png" />
+                    </image>
+                </ImageView>
+            <Text layoutX="18.0" layoutY="388.2421875" strokeType="OUTSIDE" strokeWidth="0.0" text="Icon Created by Freepik at www.flaticon.com" wrappingWidth="163.0" AnchorPane.bottomAnchor="10.0625" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="19.0">
+               <font>
+                  <Font name="Arial" size="8.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane layoutX="119.0" layoutY="51.0" prefHeight="400.0" prefWidth="332.0" style="-fx-background-color: #80ded9;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="74.0" fitWidth="78.0" layoutX="123.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="123.0" AnchorPane.rightAnchor="123.0" AnchorPane.topAnchor="48.0">
+                    <image>
+                        <Image url="@imageResources/private.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="usernameLabel" alignment="CENTER" layoutX="8.0" layoutY="160.0" prefHeight="26.0" prefWidth="115.0" text="Username" textAlignment="CENTER" AnchorPane.leftAnchor="8.0">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font></Label>
+                <TextField fx:id="usernameTextField" layoutX="134.0" layoutY="158.0" prefHeight="26.0" prefWidth="165.0" promptText="Username" style="-fx-border-radius: 5; -fx-background-color: #80ded9; -fx-border-color: #000000;" AnchorPane.rightAnchor="21.0" />
+                <Label fx:id="passwordLabel" alignment="CENTER" layoutX="8.0" layoutY="197.0" prefHeight="26.0" prefWidth="115.0" text="Password" textAlignment="CENTER" AnchorPane.leftAnchor="8.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font></Label>
+                <PasswordField fx:id="passwordTextField" layoutX="134.0" layoutY="195.0" prefHeight="26.0" prefWidth="165.0" promptText="Password" style="-fx-border-radius: 5; -fx-background-color: #80ded9; -fx-border-color: #000000;" AnchorPane.rightAnchor="21.0" />
+                <Button fx:id="loginButton" layoutX="22.0" layoutY="262.0" mnemonicParsing="false" onAction="#onActionLogin" prefHeight="32.0" prefWidth="277.0" style="-fx-background-color: #5d737e;" text="Login" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="21.0">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font></Button>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="332.0" prefHeight="17.0" prefWidth="264.0" text="Invalid Login. Please try again." visible="false" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="16.0" />
+            <Label fx:id="messageLabel" alignment="CENTER" layoutX="21.0" layoutY="307.0" prefHeight="80.0" prefWidth="278.0" textAlignment="CENTER" textFill="RED" wrapText="true" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0">
+               <font>
+                  <Font name="Arial Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="countryTitleLabel" alignment="CENTER" layoutX="187.0" layoutY="11.0" prefHeight="11.0" prefWidth="74.0" text="Country:" AnchorPane.topAnchor="11.0">
+               <font>
+                  <Font name="Arial Italic" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="countryLabel" layoutX="250.0" layoutY="9.0" AnchorPane.topAnchor="11.0">
+               <font>
+                  <Font name="Arial Italic" size="10.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

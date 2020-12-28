@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #FFFEFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.AptOverviewController">
+    <children>
+        <AnchorPane layoutX="-2.0" layoutY="-3.0" prefHeight="604.0" prefWidth="249.0" style="-fx-background-color: #5d737E;">
+            <children>
+                <Button fx:id="addAptButton" layoutX="50.0" layoutY="180.0" mnemonicParsing="false" onAction="#onActionAddApt" prefHeight="33.0" prefWidth="150.0" style="-fx-background-color: #FFFEFF;" text="Add Appointment" AnchorPane.topAnchor="220.0">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="updateAptButton" layoutX="50.0" layoutY="260.0" mnemonicParsing="false" onAction="#onActionUpdateApt" prefHeight="33.0" prefWidth="150.0" style="-fx-background-color: #FFFEFF;" text="Update Appointment" AnchorPane.topAnchor="300.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="deleteAptButton" layoutX="50.0" layoutY="340.0" mnemonicParsing="false" onAction="#onActionDeleteApt" prefHeight="33.0" prefWidth="150.0" style="-fx-background-color: #FFFEFF;" text="Delete Appointment" AnchorPane.topAnchor="380.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="customersButton" layoutX="50.0" layoutY="420.0" mnemonicParsing="false" onAction="#onActionCustomers" prefHeight="33.0" prefWidth="150.0" style="-fx-background-color: #FFFEFF;" text="Customers" AnchorPane.topAnchor="460.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="reportsButton" layoutX="50.0" layoutY="540.0" mnemonicParsing="false" onAction="#onActionReports" prefHeight="33.0" prefWidth="150.0" style="-fx-background-color: #FFFEFF;" text="Reports" AnchorPane.topAnchor="540.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="145.0" fitWidth="145.0" layoutX="52.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="30.0">
+                    <image>
+                        <Image url="@imageResources/calendar.png" />
+                    </image>
+                </ImageView>
+            <Text layoutX="43.0" layoutY="595.3046875" strokeType="OUTSIDE" strokeWidth="0.0" text="Icon Created by Freepik at www.flaticon.com" wrappingWidth="163.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="43.0">
+               <font>
+                  <Font name="Arial" size="8.0" />
+               </font>
+            </Text>
+            </children></AnchorPane>
+        <AnchorPane layoutX="246.0" prefHeight="601.0" prefWidth="854.0" style="-fx-background-color: #80ded9;">
+            <children>
+                <TableView fx:id="aptTableView" layoutX="22.0" layoutY="87.0" prefHeight="453.0" prefWidth="612.0" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="35.0" text="ID" />
+                        <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Title" />
+                        <TableColumn fx:id="descriptionColumn" prefWidth="100.0" text="Description" />
+                        <TableColumn fx:id="locationColumn" prefWidth="100.0" text="Location" />
+                        <TableColumn fx:id="contactColumn" prefWidth="93.66668701171875" text="Contact" />
+                        <TableColumn fx:id="typeColumn" prefWidth="68.5" text="Type" />
+                        <TableColumn fx:id="startColumn" prefWidth="129.0" text="Start" />
+                        <TableColumn fx:id="endColumn" prefWidth="125.0" text="End" />
+                        <TableColumn fx:id="customerIDColumn" prefWidth="86.5" text="Customer ID" />
+                    </columns>
+                </TableView>
+                <Text layoutX="314.0" layoutY="58.96875" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments" textAlignment="CENTER" wrappingWidth="225.0" AnchorPane.leftAnchor="314.0" AnchorPane.rightAnchor="315.0" AnchorPane.topAnchor="30.0">
+                    <font>
+                        <Font name="Arial Bold" size="32.0" />
+                    </font>
+                </Text>
+                <Button layoutX="774.0" layoutY="554.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="27.0" prefWidth="54.0" style="-fx-background-color: #FFFEFF;" text="Exit" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="26.0">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font>
+                </Button>
+            <Button fx:id="filterAllButton" layoutX="26.0" layoutY="554.0" mnemonicParsing="false" onAction="#onActionFilterAll" prefWidth="55.0" style="-fx-background-color: #FFFEFF;" text="All" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font></Button>
+            <Button fx:id="filterMonthButton" layoutX="140.0" layoutY="554.0" mnemonicParsing="false" onAction="#onActionFilterMonth" prefWidth="55.0" style="-fx-background-color: #FFFEFF;" text="Month" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="140.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font></Button>
+            <Button fx:id="filterWeekButton" layoutX="80.0" layoutY="554.0" mnemonicParsing="false" onAction="#onActionFilterWeek" prefWidth="55.0" style="-fx-background-color: #FFFEFF;" text="Week" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="80.0">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font></Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
